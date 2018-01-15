@@ -32,11 +32,10 @@ RESPONSE:
 * É todo conteúdo recebido por um meio de transporte, é o corpo da informação de retorno;
 
 * statusCode
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2xx (Success)
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4xx (Client Error)
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5xx (Server Error)
 

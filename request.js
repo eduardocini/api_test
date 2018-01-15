@@ -21,7 +21,7 @@ describe('Teste Contrato API', function () {
       })
   });
 
-  it('Validando response com joiAssert', function (done) {
+  it('Validando response com Joi.validate', function (done) {
     request('http://www.mocky.io/')
       .get('v2/5a5cb3872e00005e199f83db')
       .expect('Content-Type', /json/)

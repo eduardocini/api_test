@@ -11,7 +11,7 @@ const schemaFilmeValido = Joi.object({
     Value: Joi.string().required(),
   })),
   Type: Joi.string().valid(['movie', 'series', 'cartoon']).required(),
-  Production: Joi.string().required(),
+  Production: Joi.string().optional().allow('', null),
   Website: Joi.string().required(),
   Response: Joi.boolean().required(),
 }).required();

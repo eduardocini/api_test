@@ -60,9 +60,6 @@ CONTRATO DE API:
   "Type": "movie",
   "Production": "Walt Disney Pictures",
   "Website": "https://marvel.com/guardians",
-  "Response": true,
-  "teste":  123,
-  "Teste2":  "teste",
-  "teste3":  true
+  "Response": true
 }
 ```

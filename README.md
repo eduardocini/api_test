@@ -66,10 +66,10 @@ CONTRATO DE API:
 
 REFERÊNCIAS:
 ---
-NodeJS - https://nodejs.org/en/download/
-supertest - https://github.com/visionmedia/supertest
-chai - http://chaijs.com/
-Mocha - https://mochajs.org/
-JOI - https://github.com/hapijs/joi
-JOI-Assert - https://github.com/Bartvds/joi-assert
-http://www.restapitutorial.com/httpstatuscodes.html
+* NodeJS - https://nodejs.org/en/download/
+* supertest - https://github.com/visionmedia/supertest
+* chai - http://chaijs.com/
+* Mocha - https://mochajs.org/
+* JOI - https://github.com/hapijs/joi
+* JOI-Assert - https://github.com/Bartvds/joi-assert
+* http://www.restapitutorial.com/httpstatuscodes.html

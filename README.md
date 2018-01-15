@@ -33,14 +33,18 @@ RESPONSE:
 
 * statusCode
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2xx (Success)
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4xx (Client Error)
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5xx (Server Error)
 
 
 CONTRATO DE API:
 ---
 
-* Teste de contrato tem o objetivo de garantir que o conteúdo fornecido não foi modificado, podemos dizer que tem a finalidade de validar se o contrato acordado não foi quebrado, deve validar schema permanece o mesmo. 
+* Teste de contrato tem o objetivo de garantir que o conteúdo fornecido não foi modificado, podemos dizer que tem a finalidade de validar se o contrato acordado não foi quebrado, deve validar se o schema permanece o mesmo garantindo assim a integridade dos dados na comunicação entre client/server . 
 
 * É possível validar se os dados continuam do mesmo tipo, se a estrutura não foi modificada, valores limites, restringir valores recebidos etc...
 
@@ -66,10 +70,10 @@ CONTRATO DE API:
 
 REFERÊNCIAS:
 ---
-* NodeJS - https://nodejs.org/en/download/
-* supertest - https://github.com/visionmedia/supertest
-* chai - http://chaijs.com/
-* Mocha - https://mochajs.org/
-* JOI - https://github.com/hapijs/joi
-* JOI-Assert - https://github.com/Bartvds/joi-assert
-* http://www.restapitutorial.com/httpstatuscodes.html
+* [NodeJS - https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+* [supertest - https://github.com/visionmedia/supertest](https://github.com/visionmedia/supertest)
+* [chai - http://chaijs.com/](http://chaijs.com/)
+* [Mocha - https://mochajs.org/](https://mochajs.org/)
+* [JOI - https://github.com/hapijs/joi](https://github.com/hapijs/joi)
+* [JOI-Assert - https://github.com/Bartvds/joi-assert](https://github.com/Bartvds/joi-assert)
+* [http://www.restapitutorial.com/httpstatuscodes.html](http://www.restapitutorial.com/httpstatuscodes.html)

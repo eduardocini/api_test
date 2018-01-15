@@ -43,3 +43,26 @@ CONTRATO DE API:
 * Teste de contrato tem o objetivo de garantir que o conteúdo fornecido não foi modificado, podemos dizer que tem a finalidade de validar se o contrato acordado não foi quebrado, deve validar schema permanece o mesmo. 
 
 * É possível validar se os dados continuam do mesmo tipo, se a estrutura não foi modificada, valores limites, restringir valores recebidos etc...
+
+
+```json
+{
+  "Title": "Guardians of the Galaxy Vol. 2",
+  "Year": 2017,
+  "Language": "English",
+  "Ratings": [{
+    "Source": "Rotten Tomatoes",
+    "Value": "83%"
+  }, {
+    "Source": "Metacritic",
+    "Value": "67/100"
+  }],
+  "Type": "movie",
+  "Production": "Walt Disney Pictures",
+  "Website": "https://marvel.com/guardians",
+  "Response": true,
+  "teste":  123,
+  "Teste2":  "teste",
+  "teste3":  true
+}
+```

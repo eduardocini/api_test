@@ -6,7 +6,8 @@ const expect = require('chai').expect;
 const joiAssert = require('joi-assert');
 
 const {
-  schemaFilmeValido
+  schemaFilmeValido,
+  schemanheritingRating
 } = require('./schema');
 
 describe('Teste Contrato API', function () {
@@ -27,6 +28,9 @@ describe('Teste Contrato API', function () {
       .expect('Content-Type', /json/)
       .end(function (err, res) {
         expect(res.status).to.be.eql(200);
+        //abortEarly: true. Para a validação assim que ocorre o primeiro erro,
+        //abortEarly: false. Retorna todos os erros encontrados no schema.
+        //Por default esse tag é true
         Joi.validate(res.body, schemaFilmeValido, {
           abortEarly: false
         }, (err, data) => {
@@ -36,4 +40,18 @@ describe('Teste Contrato API', function () {
       })
   });
 
+  it('Validando response utilizando schema conjugado', function (done) {
+    request('http://www.mocky.io/')
+      .get('v2/5a5cb3872e00005e199f83db')
+      .expect('Content-Type', /json/)
+      .end(function (err, res) {
+        expect(res.status).to.be.eql(200);
+        Joi.validate(res.body, schemanheritingRating, {
+          abortEarly: false
+        }, (err, data) => {
+          if (err) throw err;
+        });
+        done(err);
+      })
+  });
 });

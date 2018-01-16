@@ -26,7 +26,7 @@ const ratingSchema = Joi.object({
   Value: Joi.string().required(),
 })
 
-//É possivel conjugar multiplos esquemas sem a necessidade de duplicar codigos
+//É possivel conjugar multiplos schemas sem a necessidade de duplicar codigos
 //no exemplo abaixo, importamos o schema ratingSchema.
 //Essa estrutura é util quando possuímos varios micro serviços que irão compor um unico serviço final
 //e precisamos tbm implementar testes para esses micro serviços.

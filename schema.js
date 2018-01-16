@@ -19,7 +19,7 @@ const schemaFilmeValido = Joi.object({
   Response: Joi.boolean().required(),
 }).required();
 
-//Caso tenhamos um serviço de consulta apenas para o rating podemos criar um schema unico para ele,
+//Caso tenhamos um microserviço de rating podemos criar um schema unico para ele,
 //e a depois importaremos esse schema para dentro do schema de Filmes.
 const ratingSchema = Joi.object({
   Source: Joi.string().required(),

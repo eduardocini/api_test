@@ -10,10 +10,13 @@ const {
   schemanheritingRating
 } = require('./schema');
 
+const URL = 'http://www.mocky.io/';
+const PATH = 'v2/5a5cb3872e00005e199f83db'
+
 describe('Teste Contrato API', function () {
   it('Validando response com joiAssert', function (done) {
-    request('http://www.mocky.io/')
-      .get('v2/5a5cb3872e00005e199f83db')
+    request(URL)
+      .get(PATH)
       .expect('Content-Type', /json/)
       .end(function (err, res) {
         expect(res.status).to.be.eql(200);
@@ -23,11 +26,11 @@ describe('Teste Contrato API', function () {
   });
 
   it('Validando response com Joi.validate', function (done) {
-    request('http://www.mocky.io/')
-      .get('v2/5a5cb3872e00005e199f83db')
+    request(URL)
+      .get(PATH)
       .expect('Content-Type', /json/)
       .end(function (err, res) {
-        expect(res.status).to.be.eql(200);
+        expect(res.status).to.be.eql(200);  
         //abortEarly: true. Para a validação assim que ocorre o primeiro erro,
         //abortEarly: false. Retorna todos os erros encontrados no schema.
         //Por default esse tag é true
@@ -41,8 +44,8 @@ describe('Teste Contrato API', function () {
   });
 
   it('Validando response utilizando schema conjugado', function (done) {
-    request('http://www.mocky.io/')
-      .get('v2/5a5cb3872e00005e199f83db')
+    request(URL)
+      .get(PATH)
       .expect('Content-Type', /json/)
       .end(function (err, res) {
         expect(res.status).to.be.eql(200);

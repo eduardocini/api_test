@@ -67,6 +67,13 @@ CONTRATO DE API:
 }
 ```
 
+#Exemplo execução do teste Plans.
+```shell
+mocha request.js 
+```
+
+
+
 REFERÊNCIAS:
 ---
 * [NodeJS - https://nodejs.org/en/download/](https://nodejs.org/en/download/)

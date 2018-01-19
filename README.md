@@ -67,7 +67,7 @@ CONTRATO DE API:
 }
 ```
 
-#Exemplo execução do teste Plans.
+#Exemplo execução do teste.
 ```shell
 mocha request.js 
 ```

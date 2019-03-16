@@ -1,5 +1,7 @@
 'use strict';
 
+const config = require('./config');
+
 const Joi = require('joi');
 const request = require('supertest');
 const expect = require('chai').expect;
@@ -10,13 +12,16 @@ const {
   schemanheritingRating
 } = require('./schema');
 
-const URL = 'http://www.mocky.io/';
-const PATH = 'v2/5a5cb3872e00005e199f83db'
+const URL = config.URL;
+const PATH_GET = config.PATH_GET;
+
+console.log(URL);
+console.log(PATH_GET);
 
 describe('Teste Contrato API', function () {
-  it('Validando response com joiAssert', function (done) {
+  it.only('Validando response com joiAssert', function (done) {
     request(URL)
-      .get(PATH)
+      .get(PATH_GET)
       .expect('Content-Type', /json/)
       .end(function (err, res) {
         expect(res.status).to.be.eql(200);
@@ -27,7 +32,7 @@ describe('Teste Contrato API', function () {
 
   it('Validando response com Joi.validate', function (done) {
     request(URL)
-      .get(PATH)
+      .get(PATH_GET)
       .expect('Content-Type', /json/)
       .end(function (err, res) {
         expect(res.status).to.be.eql(200);  
@@ -45,7 +50,7 @@ describe('Teste Contrato API', function () {
 
   it('Validando response utilizando schema conjugado', function (done) {
     request(URL)
-      .get(PATH)
+      .get(PATH_GET)
       .expect('Content-Type', /json/)
       .end(function (err, res) {
         expect(res.status).to.be.eql(200);
